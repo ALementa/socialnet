@@ -36,6 +36,9 @@ export default async function PostsPage() {
             by
             <Link href={`/users/${post.clerk_id}`}>{post.username}</Link>
           </p>
+          <p>
+            <Link href={`/posts/${post.id}`}>Open post</Link>
+          </p>
         </div>
       ))}
     </div>
