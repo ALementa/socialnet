@@ -9,7 +9,8 @@ export default function NavBar() {
   // bg-gray-100
   // bg-red-200
   return (
-    <nav className="flex gap-6 p-4 border-b text-black='true' ">
+    <nav className="fixed left-0 top-0 h-full w-56 flex gap-6 p-4 border-b text-black='true' ">
+      {/* <nav className="flex items-center justify-between p-4 border-b bg-white shadow-sm"> */}
       {/* {user && (
         <Avatar.Root className="inline-flex h-8 w-8 rounded-full overflow-hidden bg-gray-200">
           <Avatar.Image src={user.imageUrl} alt={user.fullName || "User"} />
@@ -32,13 +33,26 @@ export default function NavBar() {
           </Avatar.Root>
         </Link>
       )}
-      <Link href="/">Home</Link>
+      <Link className="hover:text-purple-600 transition" href="/">
+        Home
+      </Link>
 
-      <Link href="/posts">Timeline</Link>
+      <Link className="hover:text-purple-600 transition" href="/posts">
+        Timeline
+      </Link>
 
-      {user && <Link href={`/users/${user.id}`}>Profile</Link>}
+      {user && (
+        <Link
+          className="hover:text-purple-600 transition"
+          href={`/users/${user.id}`}
+        >
+          Profile
+        </Link>
+      )}
 
-      <Link href="/about">About</Link>
+      <Link className="hover:text-purple-600 transition" href="/about">
+        About
+      </Link>
     </nav>
   );
 }

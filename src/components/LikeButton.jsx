@@ -11,5 +11,12 @@ export default function LikeButton({ postId }) {
     });
   }
 
-  return <button onClick={handleLike}>❤️ Like</button>;
+  return (
+    <button
+      className="px-5 py-2 bg-purple-600 text-white font-medium rounded-lg shadow hover:bg-purple-700 active:scale-95 transition-all"
+      onClick={handleLike}
+    >
+      ❤️ Like
+    </button>
+  );
 }

@@ -24,7 +24,9 @@ export default function EditProfileForm({ user }) {
         onChange={(e) => setBio(e.target.value)}
         placeholder="Your bio"
       />
-      <button>Save</button>
+      <button className="px-5 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition-all">
+        Save
+      </button>
     </form>
   );
 }

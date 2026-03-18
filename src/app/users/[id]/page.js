@@ -64,7 +64,12 @@ export default async function UserPage({ params }) {
           <h3>{post.title}</h3>
           <p>{post.content}</p>
           <p>
-            <Link href={`/posts/${post.id}/edit`}>Edit post</Link>
+            <Link
+              className="inline-flex items-center gap-2 mt-3 px-5 py-2 bg-purple-600 text-white rounded-full shadow hover:bg-purple-700 hover:shadow-lg transition-all"
+              href={`/posts/${post.id}/edit`}
+            >
+              Edit post
+            </Link>
           </p>
         </div>
       ))}

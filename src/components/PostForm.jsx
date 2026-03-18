@@ -26,19 +26,27 @@ export default function PostForm() {
 
   return (
     <form onSubmit={submit}>
-      <input
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-        placeholder="Title"
-      />
-
-      <textarea
-        value={content}
-        onChange={(e) => setContent(e.target.value)}
-        placeholder="Content"
-      />
-
-      <button>Create post</button>
+      <p className="text-2xl font-bold mb-4">Title</p>
+      <p>
+        <input
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          placeholder="Title"
+        />
+      </p>
+      <p className="text-2xl font-bold mb-4">Content</p>
+      <p>
+        <textarea
+          value={content}
+          onChange={(e) => setContent(e.target.value)}
+          placeholder="Content"
+        />
+      </p>
+      <p>
+        <button className="inline-flex items-center gap-2 mt-3 px-5 py-2 bg-gray-200 text-black rounded-full shadow hover:bg-gray-500 active:scale-95 hover:shadow-lg transition-all">
+          Create post
+        </button>
+      </p>
     </form>
   );
 }

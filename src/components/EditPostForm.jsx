@@ -20,17 +20,27 @@ export default function EditPostForm({ post }) {
 
   return (
     <form onSubmit={submit}>
-      <input
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-        placeholder="Title"
-      />
-      <textarea
-        value={content}
-        onChange={(e) => setContent(e.target.value)}
-        placeholder="Content"
-      />
-      <button>Save</button>
+      <h2 className="text-2xl font-bold mb-4">Title</h2>
+      <p>
+        <input
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          placeholder="Title"
+        />
+      </p>
+      <h2 className="text-2xl font-bold mb-4">Content</h2>
+      <p>
+        <textarea
+          value={content}
+          onChange={(e) => setContent(e.target.value)}
+          placeholder="Content"
+        />
+      </p>
+      <p>
+        <button className="px-5 py-2 bg-purple-600 text-white font-medium rounded-lg shadow hover:bg-purple-700 active:scale-95 transition-all">
+          Save
+        </button>
+      </p>
     </form>
   );
 }

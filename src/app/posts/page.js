@@ -29,8 +29,6 @@ export default async function PostsPage() {
           <h3>{post.title}</h3>
 
           <p>{post.content}</p>
-          <p>❤️ {post.likes_count} likes</p>
-          <LikeButton postId={post.id} />
 
           <p>
             by
@@ -38,6 +36,10 @@ export default async function PostsPage() {
           </p>
           <p>
             <Link href={`/posts/${post.id}`}>Open post</Link>
+          </p>
+          <p>
+            ❤️ {post.likes_count} likes
+            <LikeButton postId={post.id} />
           </p>
         </div>
       ))}
