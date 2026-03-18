@@ -5,4 +5,13 @@
 // export const config = {
 //   matcher: ["/((?!_next|.*\\..*).*)"],
 // };
-export { default, config } from "./src/proxy";
+
+// export { default, config } from "./src/proxy";
+
+import { clerkMiddleware } from "@clerk/nextjs/server";
+
+export default clerkMiddleware();
+
+export const config = {
+  matcher: ["/((?!.*\\..*|_next).*)", "/", "/(api|trpc)(.*)"],
+};
